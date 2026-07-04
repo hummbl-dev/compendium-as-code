@@ -18,6 +18,7 @@ Public seed repository. Source-adapter infrastructure only.
 - Schema: [`schemas/compendium-as-code-v0.1.json`](schemas/compendium-as-code-v0.1.json)
 - Example: [`examples/compendium-source-v0.1.example.json`](examples/compendium-source-v0.1.example.json)
 - Fixtures: [`fixtures/valid/compendium-source-v0.1.valid.json`](fixtures/valid/compendium-source-v0.1.valid.json), [`fixtures/invalid/compendium-source-v0.1.invalid.json`](fixtures/invalid/compendium-source-v0.1.invalid.json)
+- Receipt: [`receipts/compendium-as-code-v0.1-packet-receipt.md`](receipts/compendium-as-code-v0.1-packet-receipt.md)
 
 ## Hard Boundary
 
