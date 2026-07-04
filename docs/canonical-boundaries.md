@@ -18,3 +18,4 @@ It is a governed adapter layer for:
 - Preserve original activity description.
 - Mark all derived fields.
 - Mark HUMMBL mappings as non-upstream annotations.
+- Validate fixture-backed import semantics before promoting adapter maturity.

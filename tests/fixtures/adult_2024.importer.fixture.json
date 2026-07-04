@@ -1,0 +1,20 @@
+{
+  "adapter": "adult_2024",
+  "source_activity": {
+    "activity_code": " 17100 ",
+    "activity_description": "General household cleaning",
+    "met": 3.5,
+    "met_source": "upstream"
+  },
+  "imported_activity": {
+    "activity_code": "17100",
+    "activity_description": "General household cleaning",
+    "met": 3.5,
+    "met_source": "upstream",
+    "hummbl_annotations": {
+      "source_file_required": true,
+      "audited_by": "compendium-as-code"
+    }
+  },
+  "relationship": "same"
+}
