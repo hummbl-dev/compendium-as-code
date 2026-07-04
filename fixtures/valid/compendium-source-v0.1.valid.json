@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "validated-example",
+  "compendiumManifest": {
+    "id": "compendium-as-code/source-ingest-v1",
+    "title": "Compendium source ingest packet",
+    "version": 1,
+    "scope": "source-ingestion"
+  },
+  "authority": {
+    "owner": "compendium-as-code",
+    "canActOnBehalfOf": ["taxonomy_team"]
+  },
+  "source": {
+    "name": "Compendium of Physical Activities",
+    "retrievedAt": "2026-07-01T00:00:00Z",
+    "license": "Publicly licensed source terms",
+    "uri": "https://pacompendium.com/",
+    "format": "tsv"
+  },
+  "transform": {
+    "importMode": "snapshot",
+    "mappingVersion": "cpas-v0.1",
+    "lineageRecord": "provenance/lineage-2026-07-01.json"
+  },
+  "fixtureContract": {
+    "validationCount": 1,
+    "validUntil": "2027-01-01T00:00:00Z"
+  },
+  "receiptRequirements": {
+    "sourceIdentity": "source-identity-receipt.v0.1",
+    "license": "license-check-receipt.v0.1",
+    "transform": "transform-receipt.v0.1",
+    "validation": "validation-receipt.v0.1",
+    "downstreamUse": "downstream-use-receipt.v0.1"
+  }
+}

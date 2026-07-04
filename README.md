@@ -8,6 +8,18 @@ It preserves upstream source boundaries, citations, release lineage, activity-co
 
 Public seed repository. Source-adapter infrastructure only.
 
+## Packet status
+
+- `seed` -> `v0.1-draft`
+
+## v0.1 packet locations
+
+- Boundary: [`docs/v0.1-boundary.md`](docs/v0.1-boundary.md)
+- Schema: [`schemas/compendium-as-code-v0.1.json`](schemas/compendium-as-code-v0.1.json)
+- Example: [`examples/compendium-source-v0.1.example.json`](examples/compendium-source-v0.1.example.json)
+- Fixtures: [`fixtures/valid/compendium-source-v0.1.valid.json`](fixtures/valid/compendium-source-v0.1.valid.json), [`fixtures/invalid/compendium-source-v0.1.invalid.json`](fixtures/invalid/compendium-source-v0.1.invalid.json)
+- Receipt: [`receipts/compendium-as-code-v0.1-packet-receipt.md`](receipts/compendium-as-code-v0.1-packet-receipt.md)
+
 ## Hard Boundary
 
 This repository does not vendor or mirror full upstream Compendium tables.
