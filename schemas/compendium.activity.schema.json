@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/compendium-as-code/schemas/compendium.activity.schema.json",
+  "title": "Compendium Activity",
+  "type": "object",
+  "required": ["release_id", "activity_code", "activity_description", "met_value", "met_source"],
+  "properties": {
+    "release_id": {"type": "string"},
+    "activity_code": {"type": "string", "minLength": 1},
+    "activity_description": {"type": "string", "minLength": 1},
+    "met_value": {"type": "number", "exclusiveMinimum": 0},
+    "met_source": {"type": "string", "enum": ["upstream", "derived"]},
+    "hummbl_annotations": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false
+}

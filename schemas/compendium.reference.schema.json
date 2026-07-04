@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/compendium-as-code/schemas/compendium.reference.schema.json",
+  "title": "Compendium Reference",
+  "type": "object",
+  "required": ["reference_id", "title", "source_url"],
+  "properties": {
+    "reference_id": {"type": "string"},
+    "title": {"type": "string"},
+    "authors": {"type": "array", "items": {"type": "string"}},
+    "year": {"type": "integer"},
+    "source_url": {"type": "string", "format": "uri"},
+    "doi": {"type": "string"}
+  },
+  "additionalProperties": false
+}

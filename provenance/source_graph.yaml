@@ -1,0 +1,9 @@
+nodes:
+  - id: compendium-of-physical-activities
+    kind: canonical_external_source
+  - id: compendium-as-code
+    kind: governed_adapter
+edges:
+  - from: compendium-as-code
+    to: compendium-of-physical-activities
+    relationship: adapts_without_owning

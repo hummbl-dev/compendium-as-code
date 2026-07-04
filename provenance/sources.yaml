@@ -1,0 +1,7 @@
+sources:
+  - id: pacomp-official-site
+    title: Compendium of Physical Activities
+    url: https://pacompendium.com/
+    checked_date: 2026-07-04
+    status: canonical_external_source
+    notes: Official site for Adult, Older Adult, and Wheelchair Compendia.

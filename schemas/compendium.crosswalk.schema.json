@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/compendium-as-code/schemas/compendium.crosswalk.schema.json",
+  "title": "Compendium Crosswalk",
+  "type": "object",
+  "required": ["crosswalk_id", "from_release_id", "to_release_id", "activity_code", "relationship"],
+  "properties": {
+    "crosswalk_id": {"type": "string"},
+    "from_release_id": {"type": "string"},
+    "to_release_id": {"type": "string"},
+    "activity_code": {"type": "string"},
+    "target_activity_code": {"type": "string"},
+    "relationship": {"type": "string", "enum": ["same", "renamed", "split", "merged", "retired", "new"]},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

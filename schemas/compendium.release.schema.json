@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hummbl-dev/compendium-as-code/schemas/compendium.release.schema.json",
+  "title": "Compendium Release",
+  "type": "object",
+  "required": ["release_id", "title", "year", "population", "source_url"],
+  "properties": {
+    "release_id": {"type": "string"},
+    "title": {"type": "string"},
+    "year": {"type": "integer"},
+    "population": {"type": "string", "enum": ["adult", "older_adult", "wheelchair_user"]},
+    "source_url": {"type": "string", "format": "uri"},
+    "citation": {"type": "string"}
+  },
+  "additionalProperties": false
+}
