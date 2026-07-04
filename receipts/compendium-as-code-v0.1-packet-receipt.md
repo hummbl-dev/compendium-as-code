@@ -31,4 +31,4 @@
 
 - Directory contract check: `docs/`, `schemas/`, `examples/`, `fixtures/valid/`, `fixtures/invalid/`, `receipts/`
 - Structural review against `docs/as-code/pr-checklist.md` and `hummbl-dev#70`
-- Negative fixture includes date format, license/source identity, validation-count, and missing receipt field cases.
+- Negative fixture includes an explicit `additionalProperties` schema failure, date format, license/source identity, validation-count, and missing receipt field cases.

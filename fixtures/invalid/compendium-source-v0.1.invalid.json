@@ -5,7 +5,8 @@
     "id": "compendium-as-code/source-ingest-v1",
     "title": "Invalid compendium source packet",
     "version": 0,
-    "scope": "source-ingestion"
+    "scope": "source-ingestion",
+    "unexpectedField": "guaranteed-schema-failure"
   },
   "authority": {
     "owner": "compendium-as-code",
