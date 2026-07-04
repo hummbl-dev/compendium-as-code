@@ -1,0 +1,20 @@
+{
+  "adapter": "wheelchair_2024",
+  "source_activity": {
+    "activity_code": " 17110 ",
+    "activity_description": "Seated upper-limb mobility work",
+    "met": 3.0,
+    "met_source": "upstream"
+  },
+  "imported_activity": {
+    "activity_code": "17110",
+    "activity_description": "Seated upper-limb mobility work",
+    "met": 3.0,
+    "met_source": "upstream",
+    "hummbl_annotations": {
+      "equipment_notes": "chair-assisted",
+      "audited_by": "compendium-as-code"
+    }
+  },
+  "relationship": "same"
+}

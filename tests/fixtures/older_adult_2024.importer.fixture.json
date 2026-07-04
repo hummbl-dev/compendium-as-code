@@ -1,0 +1,20 @@
+{
+  "adapter": "older_adult_2024",
+  "source_activity": {
+    "activity_code": " 17105 ",
+    "activity_description": "Light indoor cleaning",
+    "met": 2.8,
+    "met_source": "upstream"
+  },
+  "imported_activity": {
+    "activity_code": "17105",
+    "activity_description": "Light indoor cleaning",
+    "met": 2.8,
+    "met_source": "upstream",
+    "hummbl_annotations": {
+      "mobility_focus": "reduced-impact",
+      "audited_by": "compendium-as-code"
+    }
+  },
+  "relationship": "same"
+}

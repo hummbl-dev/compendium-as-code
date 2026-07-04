@@ -1,0 +1,37 @@
+{
+  "adapter": "older_adult_2024",
+  "source_activity": {
+    "activity_code": "17150",
+    "activity_description": "Upper body movement group class",
+    "met": 3.4,
+    "met_source": "upstream"
+  },
+  "imported_activity": {
+    "activity_code": "17150",
+    "activity_description": "Upper body movement group class",
+    "met": 3.4,
+    "met_source": "upstream",
+    "hummbl_annotations": {
+      "merged_from": [
+        "OA-101",
+        "OA-102"
+      ],
+      "audited_by": "compendium-as-code"
+    }
+  },
+  "relationship": "merged",
+  "source_activities": [
+    {
+      "activity_code": "OA-101",
+      "activity_description": "Upper body seated routine",
+      "met": 3.4,
+      "met_source": "upstream"
+    },
+    {
+      "activity_code": "OA-102",
+      "activity_description": "Upper body standing routine",
+      "met": 4.2,
+      "met_source": "upstream"
+    }
+  ]
+}
