@@ -3,7 +3,8 @@
 ## Packet identity
 
 - Repo: `compendium-as-code`
-- Packet folder: `seed -> v0.1-draft`
+- Packet status: `seed -> v0.1-draft`
+- Packet folder: `.` (repository root)
 - Scope source: `compendium-as-code #4`
 - PR target: `chore/codex/compendium-as-code-v0-1-packet-main` (this change set)
 
@@ -30,5 +31,6 @@
 ## Validation checks executed
 
 - Directory contract check: `docs/`, `schemas/`, `examples/`, `fixtures/valid/`, `fixtures/invalid/`, `receipts/`
-- Structural review against `docs/as-code/pr-checklist.md` and `hummbl-dev#70`
-- Negative fixture includes an explicit `additionalProperties` schema failure, date format, license/source identity, validation-count, and missing receipt field cases.
+- Structural review against `docs/v0.1-boundary.md` and `hummbl-dev#70`
+- Schema validation uses `jsonschema.Draft202012Validator` with `FormatChecker`; `source.uri` also has an explicit URI-scheme pattern so malformed source locations fail in local validation.
+- Negative fixture includes an explicit `additionalProperties` schema failure, authority boundary violation, manifest version floor, URI pattern, and validation-count cases.
