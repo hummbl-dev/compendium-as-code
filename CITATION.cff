@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: compendium-as-code
+message: Cite the upstream Compendium of Physical Activities for source data and cite this repository only for HUMMBL adapter schemas, validation, and provenance infrastructure.
+type: software
+authors:
+  - name: HUMMBL
+repository-code: https://github.com/hummbl-dev/compendium-as-code
+url: https://github.com/hummbl-dev/compendium-as-code
+license: MIT
+keywords:
+  - Compendium of Physical Activities
+  - MET
+  - source governance
+  - physical activity
