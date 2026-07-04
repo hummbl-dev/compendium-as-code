@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/hummbl-dev/compendium-as-code/main/schemas/compendium-as-code-v0.1.json",
+  "title": "Compendium-as-Code v0.1 Packet",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "packetStatus",
+    "compendiumManifest",
+    "authority",
+    "source",
+    "receiptRequirements"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "v0.1"
+    },
+    "packetStatus": {
+      "type": "string",
+      "enum": ["seed", "v0.1-draft", "validated-example", "v0.1-packet"]
+    },
+    "compendiumManifest": {
+      "type": "object",
+      "required": ["id", "title", "version", "scope"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9\\-]*/[a-z0-9][a-z0-9\\-]*$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scope": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["owner", "canActOnBehalfOf"],
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "canActOnBehalfOf": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": ["name", "retrievedAt", "license", "uri", "format"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "retrievedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "license": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "checksum": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "transform": {
+      "type": "object",
+      "required": ["importMode", "mappingVersion", "lineageRecord"],
+      "properties": {
+        "importMode": {
+          "type": "string",
+          "enum": ["append-only", "replace", "snapshot"]
+        },
+        "mappingVersion": {
+          "type": "string"
+        },
+        "lineageRecord": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "fixtureContract": {
+      "type": "object",
+      "required": ["validationCount", "validUntil"],
+      "properties": {
+        "validationCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "validUntil": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "adverseCasesCovered": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "receiptRequirements": {
+      "type": "object",
+      "required": ["sourceIdentity", "license", "transform", "validation", "downstreamUse"],
+      "properties": {
+        "sourceIdentity": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "transform": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "downstreamUse": {
+          "type": "string"
+        },
+        "exception": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "adjacentRepos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

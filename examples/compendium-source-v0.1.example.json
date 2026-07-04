@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "v0.1",
+  "packetStatus": "v0.1-draft",
+  "compendiumManifest": {
+    "id": "compendium-as-code/source-ingest-v1",
+    "title": "Compendium source ingest packet",
+    "version": 1,
+    "scope": "source-ingestion",
+    "description": "Starter record for ingesting an upstream source snapshot into governed compendium outputs."
+  },
+  "authority": {
+    "owner": "compendium-as-code",
+    "canActOnBehalfOf": ["taxonomy_team", "platform_team"]
+  },
+  "source": {
+    "name": "Compendium of Physical Activities",
+    "retrievedAt": "2026-07-04T00:00:00Z",
+    "license": "Publicly licensed source terms",
+    "uri": "https://pacompendium.com/",
+    "format": "tsv"
+  },
+  "transform": {
+    "importMode": "append-only",
+    "mappingVersion": "cpas-v0.1",
+    "lineageRecord": "provenance/lineage-2026-07-04.json",
+    "notes": "Preserve original activity codes and map to HUMMBL-compatible annotation fields."
+  },
+  "fixtureContract": {
+    "validationCount": 2,
+    "validUntil": "2027-01-01T00:00:00Z",
+    "adverseCasesCovered": [
+      "missing-license",
+      "renamed-source-columns",
+      "duplicated-activity-code"
+    ]
+  },
+  "receiptRequirements": {
+    "sourceIdentity": "source-identity-receipt.v0.1",
+    "license": "license-check-receipt.v0.1",
+    "transform": "transform-receipt.v0.1",
+    "validation": "validation-receipt.v0.1",
+    "downstreamUse": "downstream-use-receipt.v0.1",
+    "exception": "exception-receipt.v0.1"
+  },
+  "adjacentRepos": [
+    "knowledge-as-code",
+    "protocol-as-code",
+    "compliance-as-code",
+    "governance-as-code"
+  ]
+}
