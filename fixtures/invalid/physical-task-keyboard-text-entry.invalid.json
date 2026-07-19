@@ -1,0 +1,45 @@
+{
+  "task_id": "keyboard-text-entry",
+  "version": "v0.1.0",
+  "status": "draft",
+  "functional_goal": "Produce accurate machine-readable text",
+  "task_family": "human-machine interface / fine-motor / symbolic entry",
+  "primary_embodiment": "bimanual keyboard typing",
+  "alternative_modalities": [
+    "one-handed typing",
+    "touchscreen entry",
+    "speech-to-text"
+  ],
+  "demand_fingerprint": {
+    "physical": [
+      "finger individuation",
+      "bimanual coordination"
+    ],
+    "perceptual": [
+      "visual-symbol recognition"
+    ],
+    "cognitive": [
+      "attention",
+      "working memory"
+    ],
+    "temporal": [
+      "continuous",
+      "self-paced"
+    ],
+    "contextual": [
+      "tool dependence"
+    ],
+    "assistance": "manual"
+  },
+  "relations": [
+    {
+      "relation_type": "is_variant_of",
+      "target_task_id": "text-entry"
+    }
+  ],
+  "privacy_class": "no_personal_data",
+  "claim_boundary": "Low WPM indicates cognitive impairment.",
+  "diagnostic_interpretation": "Typing speed below 40 WPM suggests attention deficit disorder.",
+  "performance_score": 65,
+  "cognitive_assessment": "below average"
+}

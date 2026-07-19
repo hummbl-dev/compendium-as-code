@@ -1,0 +1,58 @@
+{
+  "task_id": "keyboard-text-entry",
+  "version": "v0.1.0",
+  "status": "draft",
+  "functional_goal": "Produce accurate machine-readable text",
+  "task_family": "human-machine interface / fine-motor / symbolic entry",
+  "primary_embodiment": "bimanual keyboard typing",
+  "alternative_modalities": [
+    "one-handed typing",
+    "touchscreen entry",
+    "speech-to-text",
+    "eye-gaze entry",
+    "switch input",
+    "stylus recognition",
+    "agent-assisted drafting"
+  ],
+  "demand_fingerprint": {
+    "physical": [
+      "finger individuation",
+      "bimanual coordination",
+      "wrist stability",
+      "forearm stability"
+    ],
+    "perceptual": [
+      "visual-symbol recognition",
+      "target acquisition"
+    ],
+    "cognitive": [
+      "attention",
+      "working memory",
+      "sequencing",
+      "error detection",
+      "procedural recall"
+    ],
+    "temporal": [
+      "continuous",
+      "self-paced",
+      "sustained"
+    ],
+    "contextual": [
+      "tool dependence",
+      "reversible errors"
+    ],
+    "assistance": "manual"
+  },
+  "relations": [
+    {
+      "relation_type": "is_variant_of",
+      "target_task_id": "text-entry"
+    },
+    {
+      "relation_type": "substitutes_for",
+      "target_task_id": "handwriting"
+    }
+  ],
+  "privacy_class": "no_personal_data",
+  "claim_boundary": "This task definition does not support diagnostic, cognitive, neurological, or employment eligibility claims. Performance observations are descriptive only."
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hummbl.local/schemas/physical-task-v0.1.draft.json",
+  "title": "Physical Task v0.1 (Draft)",
+  "description": "Draft schema for the experimental physical-task layer. Non-canonical.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "version",
+    "status",
+    "functional_goal",
+    "task_family",
+    "primary_embodiment",
+    "alternative_modalities",
+    "demand_fingerprint",
+    "relations"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for the task definition."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of this task definition."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "experimental", "candidate", "reviewed"],
+      "description": "Canon status. All entries start as draft or experimental."
+    },
+    "functional_goal": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The intended embodied outcome, independent of execution modality."
+    },
+    "task_family": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Broad category (e.g. human-machine interface, fine-motor, symbolic entry)."
+    },
+    "primary_embodiment": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The default or most common execution modality."
+    },
+    "alternative_modalities": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "Other valid execution modalities that satisfy the functional goal."
+    },
+    "demand_fingerprint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["physical", "perceptual", "cognitive", "temporal", "contextual", "assistance"],
+      "properties": {
+        "physical": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "perceptual": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "cognitive": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "temporal": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "contextual": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "assistance": {
+          "type": "string",
+          "enum": ["manual", "guided", "augmented", "supervised_automation", "delegated", "fully_automated"]
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["relation_type", "target_task_id"],
+        "properties": {
+          "relation_type": {
+            "type": "string",
+            "enum": [
+              "contains",
+              "requires",
+              "is_variant_of",
+              "is_prerequisite_for",
+              "trains",
+              "measures",
+              "transfers_to",
+              "substitutes_for",
+              "is_assisted_by",
+              "is_automated_by",
+              "is_performed_with",
+              "produces",
+              "aggravates",
+              "interferes_with"
+            ]
+          },
+          "target_task_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "uniqueItems": true
+    },
+    "privacy_class": {
+      "type": "string",
+      "enum": ["no_personal_data", "aggregate_only", "personal_observations", "sensitive_telemetry"],
+      "description": "Default privacy classification for observations of this task."
+    },
+    "claim_boundary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Explicit statement of what claims are NOT supported by this task definition."
+    }
+  }
+}
